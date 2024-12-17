@@ -1,0 +1,235 @@
+html {
+    box-sizing: border-box;
+}
+*,*:before,*:after {
+    box-sizing:inherit;
+}
+
+@font-face {
+    font-family: 'Handwriting';
+    src: url(fonts/Handwriting-Regular.ttf) format('truetype'),
+        url(fonts/Handwriting-Regular.woff) format('woff'),
+        url(fonts/Handwriting-Regular.woff2) format('woff2'),
+        url(fonts/Handwriting-Regular.eot) format('eot'),
+        url(fonts/Handwriting-Regular.otf) format('opentype');
+    font-weight: regular;
+    font-size: 16px;
+}
+
+body {
+    align-items: center;
+    background-image: url('images/wood.png');
+    background-size: cover;
+    background-attachment: fixed;
+    max-height: 100vh;
+}
+
+.wrapper {
+    display: grid;
+    grid-template-areas: "menu main";
+    grid-template-columns: 1fr 6fr;
+}
+
+/* Title styling */
+
+.title {
+    grid-area: "title";
+    background-image: url('images/wood.png');
+    background-size: cover;
+    background-attachment: fixed;
+    max-height: 100vh;
+    position: sticky;
+    top: 0;
+    z-index: 3;
+}
+
+.main-title-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url('images/notecard.png');
+    background-size: 325px 115px;
+    background-repeat: no-repeat;
+    background-position: center;
+    min-height: 90px;
+    min-width: 325px;
+    filter: drop-shadow(3px 5px 3px rgba(101, 79, 46, 0.6));
+}
+
+#main-title {
+    padding-top: 5px;
+    padding-left: 5px;
+    font-family: 'Handwriting', sans-serif;
+}
+
+/* Menu */
+
+.menu {
+    display: flex;
+    grid-area: "menu";
+    height: 97vh;
+    position: sticky;
+    top: 0;
+    left: 0;
+}
+
+.menu-img {
+    width: 100px;
+    height: auto;
+    filter: drop-shadow(3px 5px 3px rgba(124, 98, 60, 0.5));
+}
+
+#home {
+    width: 40px;
+    height: auto;
+}
+
+#home:hover {
+    animation: wobble 1s infinite;
+}
+
+@keyframes wobble{
+    0% { transform: rotate(0deg); }
+    20% { transform: rotate(4deg); }
+    40% { transform: rotate(8deg); }
+    60% { transform: rotate(-4deg); }
+    80% { transform: rotate(-8deg); }
+    100% { transform: rotate(0deg); }
+}
+
+.menu-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    list-style-type: none;
+    align-self: center;
+    height: 97vh;
+    padding-top: 20px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+    font-family: 'Handwriting', sans-serif;
+    text-align: center;
+    font-weight: bold;
+}
+
+/* Main */
+
+.main-content {
+    grid-area: "main";
+    padding-bottom: 50px;
+}
+
+.main-grid {
+    grid-template-rows: 1fr 5fr;
+}
+
+.content {
+    display: grid;
+    grid-template-areas: 
+    "row1"
+    "row2"
+    "row3"
+    "row4"
+    "row5"
+    "row6"
+    "row7"
+    "row8";
+    grid-template-rows: 1fr;
+    gap: 60px;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    height: 70vh;
+    width: auto;
+}
+
+#extra-row {
+    height: 200px;
+    width: auto;
+    margin-bottom: 40px;
+}
+
+.row img {
+    height: 70vh;
+    width: auto;
+}
+
+.note {
+    height: 250px;
+    width: 250px;
+    background-image: url('images/Blue-note.png');
+    background-repeat: no-repeat;
+    background-size: 270px 270px;
+    background-position: center;
+    filter: drop-shadow(3px 10px 3px rgba(101, 79, 46, 0.5)) brightness(1.15);
+}
+
+.note-text {
+    font-family: 'Handwriting', sans-serif;
+    padding: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    line-height: 20px;
+}
+
+#img7_2015 {
+    height: 55vh;
+    width: auto;
+}
+
+#img5_2020 {
+    height: auto;
+    width: 75vw;
+}
+
+#row1 {
+    grid-area:"row1";
+    margin-top: 40px;
+}
+
+#row2 {
+    grid-area:"row2";
+}
+
+#row3 {
+    grid-area:"row3";
+}
+
+#row4 {
+    grid-area:"row4";
+}
+
+#row5 {
+    grid-area:"row5";
+}
+
+#row5_2020 {
+    grid-area:"row5";
+    display: flex;
+    flex-direction: column;
+    height: 300px;
+}
+
+#row6 {
+    grid-area:"row6";
+}
+
+#row7 {
+    grid-area:"row7";
+}
+
+#row8 {
+    grid-area:"row8";
+}
+
+

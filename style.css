@@ -1,0 +1,176 @@
+html {
+    box-sizing: border-box;
+}
+*,*:before,*:after {
+    box-sizing:inherit;
+}
+
+@font-face {
+    font-family: 'Handwriting';
+    src: url(fonts/Handwriting-Regular.ttf) format('truetype'),
+        url(fonts/Handwriting-Regular.woff) format('woff'),
+        url(fonts/Handwriting-Regular.woff2) format('woff2'),
+        url(fonts/Handwriting-Regular.eot) format('eot'),
+        url(fonts/Handwriting-Regular.otf) format('opentype');
+    font-weight: regular;
+    font-size: 16px;
+}
+
+body {
+    align-items: center;
+    background-image: url('images/wood.png');
+    background-size: cover;
+    max-height: 100vh;
+}
+
+
+/* Title styling */
+
+.title {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin-top: 15px;
+    margin-bottom: 40px;
+    align-self: center;
+    align-items: center;
+}
+
+
+.main-title-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url('images/notecard.png');
+    background-size: 325px 115px;
+    background-repeat: no-repeat;
+    background-position: center;
+    min-height: 90px;
+    min-width: 325px;
+    filter: drop-shadow(3px 5px 3px rgba(101, 79, 46, 0.6));
+}
+
+#main-title {
+    padding-top: 5px;
+    padding-left: 5px;
+    font-family: 'Handwriting', sans-serif;
+}
+
+/* Menu */
+
+.menu-item {
+    min-height: 70px;
+    min-width: 120px;
+    text-align: center;
+    filter: drop-shadow(2px 8px 3px rgba(101, 79, 46, 0.6));
+}
+
+#left{
+    background-image: url(images/Yellow-closed1.png);
+    background-size: auto 70px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#right{
+    background-image: url(images/Yellow-closed2.png);
+    background-size: auto 70px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.menu-text {
+    padding-top: 15px;
+    font-family: 'Handwriting', sans-serif;
+    color: black;
+    font-size: 0;
+    text-decoration: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* Main Grid */
+
+.main-content {
+    display: flex;
+    justify-content: center;
+}
+
+.grid-wrapper {
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    margin-left: 20px;
+    margin-right: 15px;
+    margin-bottom: 20px;
+    max-width: 90vw;
+    max-height: 70vh;
+}
+
+.grid {
+    display: grid;
+    grid-template-areas: 
+    "book1 book2 book3 book4 book5"
+    "book6 book7 book8 book9 book10";
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    gap: 20px;
+}
+
+.grid-item {
+    display: flex;
+    align-items: center;
+    margin: auto;
+}
+
+.grid-item img{
+    width: 100%;
+    height: auto;
+    max-height: 32vh;
+    object-fit: contain;
+    filter: drop-shadow(3px 5px 3px rgba(124, 98, 60, 0.5));
+}
+
+/* grid items */
+
+#item-1 {
+    grid-area: "book1";
+}
+
+#item-2 {
+    grid-area: "book2";
+}
+
+#item-3 {
+    grid-area: "book3";
+}
+
+#item-4 {
+    grid-area: "book4";
+}
+
+#item-5 {
+    grid-area: "book5";
+}
+
+#item-6 {
+    grid-area: "book6";
+}
+
+#item-7 {
+    grid-area: "book7";
+}
+
+#item-8 {
+    grid-area: "book8";
+}
+
+#item-9 {
+    grid-area: "book9";
+}
+
+#item-10 {
+    grid-area: "book10";
+}
