@@ -18,7 +18,7 @@ html {
 
 body {
     align-items: center;
-    background-image: url('images/wood.png');
+    background-image: url('images/wood.jpg');
     background-size: cover;
     background-attachment: fixed;
     max-height: 100vh;
@@ -34,7 +34,7 @@ body {
 
 .title {
     grid-area: "title";
-    background-image: url('images/wood.png');
+    background-image: url('images/wood.jpg');
     background-size: cover;
     background-attachment: fixed;
     max-height: 100vh;
